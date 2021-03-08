@@ -12,26 +12,42 @@ pool:
 stages:
 - stage: A
   jobs:
-  - job: A
+  - job: A1
     steps:
-    - bash: echo "A1 success"
+    - bash: echo "A1 success"    
+  - job: A2
+    dependsOn: A1
+    steps:
     - bash: echo "A2 success"
+  - job: A3
+    dependsOn: A2
+    steps:
     - bash: echo "A3 success"
 
 - stage: B
   jobs:
-  - job: B
-    dependsOn: A
+  - job: B1
     steps:
-    - bash: echo "B1 success"
+    - bash: echo "B1 success"    
+  - job: B2
+    dependsOn: B1
+    steps:
     - bash: echo "B2 success"
+  - job: B3
+    dependsOn: B2
+    steps:
     - bash: echo "B3 success"
 
 - stage: C
   jobs:
-  - job: C
-    dependsOn: B
+  - job: C1    
     steps:
-    - bash: echo "C1 success"
+    - bash: echo "C1 success"    
+  - job: C2
+    dependsOn: C1
+    steps:
     - bash: echo "C2 success"
+  - job: C3
+    dependsOn: C2
+    steps:
     - bash: echo "C3 success"
