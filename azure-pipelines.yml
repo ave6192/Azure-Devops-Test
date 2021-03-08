@@ -1,0 +1,37 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: A
+  jobs:
+  - job: A
+    steps:
+    - bash: echo "A1 success"
+    - bash: echo "A2 success"
+    - bash: echo "A3 success"
+
+- stage: B
+  jobs:
+  - job: B
+    dependsOn: A
+    steps:
+    - bash: echo "B1 success"
+    - bash: echo "B2 success"
+    - bash: echo "B3 success"
+
+- stage: C
+  jobs:
+  - job: C
+    dependsOn: B
+    steps:
+    - bash: echo "C1 success"
+    - bash: echo "C2 success"
+    - bash: echo "C3 success"
