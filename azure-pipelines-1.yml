@@ -18,7 +18,7 @@ steps:
     azureSubscription: 'example-app'
     KeyVaultName: 'AvivKeyVault'
     SecretsFilter: '*'
-    RunAsPreJob: false
+    RunAsPreJob: true
     
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
