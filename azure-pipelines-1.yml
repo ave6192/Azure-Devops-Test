@@ -13,13 +13,6 @@ pool:
 
 
 steps:
-- task: AzureKeyVault@1
-  inputs:
-    azureSubscription: 'example-app'
-    KeyVaultName: 'AvivKeyVault'
-    SecretsFilter: '*'
-    RunAsPreJob: true
-
 
 - task: CmdLine@2
   inputs:
