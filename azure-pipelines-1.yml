@@ -5,6 +5,7 @@
 # https://aka.ms/yaml
 
 trigger:
+
 - main
 
 pool:
@@ -14,7 +15,7 @@ pool:
 steps:
 - task: AzureKeyVault@1
   inputs:
-    azureSubscription: 'Azure Pass - Sponsorship(2)(59dd362a-3d61-4d37-9b01-a71d556f885f)'
+    azureSubscription: 'example-app'
     KeyVaultName: 'AvivKeyVault'
     SecretsFilter: '*'
     RunAsPreJob: false
