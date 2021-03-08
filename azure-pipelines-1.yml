@@ -19,4 +19,11 @@ steps:
     KeyVaultName: 'AvivKeyVault'
     SecretsFilter: '*'
     RunAsPreJob: true
-    
+
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo *** > secret.txt
+      
+     
