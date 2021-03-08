@@ -24,6 +24,6 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      echo *** > secret.txt
+      echo a > secret.txt
       
      
